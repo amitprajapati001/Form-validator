@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0d852bba2a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              mycolor: "#a3d4cb",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="">
+    <div class="h-screen bg-indigo-100 flex justify-center items-center">
+      <div class="lg:w-2/5 md:w-1/2 w-2/3">
+        <form
+          id="divbg"
+          class="bg-white p-10 rounded-lg shadow-lg min-w-full"
+          onsubmit="return data()"
+        >
+          <h1
+            class="text-center text-2xl mb-6 text-gray-600 font-bold font-sans"
+          >
+            Formregister
+          </h1>
+          <div>
+            <label
+              class="text-gray-800 font-semibold block my-3 text-md required"
+              for="username"
+              >Username</label
+            >
+            <input
+              class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none required"
+              type="text"
+              name="username"
+              id="username"
+              placeholder="username"
+              required
+            />
+            <p class="text-red-500 text-xs italic hidden">
+              Please fill out this field.
+            </p>
+          </div>
+          <div>
+            <label
+              class="text-gray-800 font-semibold block my-3 text-md"
+              for="email"
+              >Email</label
+            >
+            <input
+              class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none required"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="@email"
+              required
+            />
+            <p class="text-red-500 text-xs italic hidden">
+              Please fill out this field.
+            </p>
+          </div>
+          <div>
+            <label
+              class="text-gray-800 font-semibold block my-3 text-md"
+              for="password"
+              >Password</label
+            >
+            <input
+              class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none shadow appearance required"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="password"
+              required
+            />
+            <p class="text-red-500 text-xs italic hidden">
+              Please fill out this field.
+            </p>
+          </div>
+          <div>
+            <label
+              class="text-gray-800 font-semibold block my-3 text-md"
+              for="confirm"
+              >Confirm password</label
+            >
+            <input
+              class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none shadow appearance"
+              type="password"
+              name="confirm"
+              id="confirm"
+              placeholder="confirm password"
+              onchange="myFun"
+              required
+            />
+            <p id="abc" class="text-red-500 text-xs italic hidden">
+              Passwords do not match.
+            </p>
+            <p id="regcheck" class="text-red-500 text-xs italic hidden">
+              Password Policy is not matching.
+            </p>
+          </div>
+
+          <button
+            id="btn"
+            type="submit"
+            class="w-full mt-6 mb-3 bg-indigo-100 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
